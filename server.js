@@ -13,7 +13,7 @@ let sensorData = {
 };
 
 // API endpoint to receive sensor data via query parameters from the ESP8266
-app.post('/updateSensorData', (req, res) => {
+app.get('/updateSensorData', (req, res) => {
     const temperature = req.query.temperature;
     const pressure = req.query.pressure;
     const flash = req.query.flash;
